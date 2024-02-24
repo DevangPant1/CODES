@@ -1,51 +1,30 @@
-//calculates and prints bill
 import java.util.Scanner;
 public class ElectricBill
 {
     String n;
     int units;
     double bill;
-    ElectricBill()
+    ElectricBill(String v,int u,double b)
     {
-        n="N/A";
-        units=0;
-        bill=0.0D;
+        n=v;
+        units=u;
+        bill=b;
     }
-    void accept()
+    public void accept()
     {
+        int un,bl;
+        String name;
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter name");
-        n=sc.next();
-        System.out.println("Enter number of units");
-        units=sc.nextInt();
+        System.out.println("PLEASE ENTER THE NAME");
+        name=sc.nextLine();
+        System.out.println("ENTER NUMBER OF CONSUMED UNITS");
+        un=sc.nextInt();
+        ElectricBill obj=new ElectricBill(name,un,1);
     }
-    void calculate()
+    public  void calculate()
     {
-        if(units<=100)
-        {
-            bill=2*units;
-        }
-        else if(units>100 && units<=300)
-        {
-            bill=(2*100)+(3*(units-100));
-        }
-        else
-        {
-            bill=(2*100)+(3*200)+(5*(units-300));
-            bill=bill+((0.025)*bill);
-        }
-    }
-    void print()
-    {
-        System.out.println("Name:"+n);
-        System.out.println("Units:"+units);
-        System.out.println("Bill:"+bill);
-    }
-    public static void main(String args[])
-    {
-        ElectricBill obj=new ElectricBill();
-        obj.accept();
-        obj.calculate();
-        obj.print();
+        accept();
+        System.out.println(obj.n());
+        
     }
 }
