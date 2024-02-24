@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=arraymax
+comment1.params=mm
+comment1.target=arraymax(int)
+comment2.params=
+comment2.target=void\ readarray()
+comment3.params=
+comment3.target=void\ large()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
